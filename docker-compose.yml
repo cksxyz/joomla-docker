@@ -16,7 +16,7 @@ services:
       MYSQL_DB_PASSWORD: joomla
       MYSQL_DATABASE: joomla
     volumes:
-      - ./belajar:/var/www/belajar
+      - ./web-belajar:/var/www/web-belajar
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
       - app-network
@@ -30,7 +30,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./belajar:/var/www/belajar
+      - ./web-belajar:/var/www/web-belajar
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
       - app-network
